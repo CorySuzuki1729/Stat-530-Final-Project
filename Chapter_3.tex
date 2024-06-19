@@ -1,0 +1,45 @@
+
+% Chapter 4 File
+
+\chapter{Experiment Analysis and Results}
+\label{chapter3}
+\thispagestyle{empty}
+
+\section{Numerical Estimation of Parameters}
+We will continue by providing the numerical estimates of the parameters in the model used for the experiment. The estimates for each model term are given by:\\
+\centerline{$\hat{\mu} = 5.4583$}
+\centerline{$\hat{\tau_{i}} = 60.0417$}
+\centerline{$\hat{\rho_{j}} = 60.0417$}
+\centerline{$\hat{\beta_{k}} = 60.0417$}
+\centerline{$\hat{\delta_{l}} = 81.875$}\\
+It is interesting to remark that the treatment, row, and column parameter estimates are the same because of the orthogonality property the Replicated Latin Square design follows. Each of the indexes is the same as well due to the square's size of $4 \times 4$. From these estimates, it can be observed that the replicates seem to be the portion of the model that contributes most to the overall mean distance traversed by hikers, while the treatment, row, and column means indicate little contribution to the overall mean effect. These inferences will further be tested by the following ANOVA table and confidence intervals.
+
+\section{Analysis of Variance Results}
+In this section, we analyze the ANOVA table which was produced using the Microsoft Excel software to verify the hand calculation work and the formulas provided from the Stat 530 lecture notes \cite{key3}. The ANOVA table can be found in Appendix A. The sum of squares for temperature seems to be larger than the other sum of square quantities, so it can be suspected that there may be significant differences between the humidity level means. This conclusion will be supported in the section that discusses the analysis of the confidence intervals.\\\\
+From the ANOVA table, it is imperative to note that to test the treatment effects hypothesis previously mentioned, the F test ratio is compared to the F critical value. They are given as:\\
+\centerline{$F^{*} = \frac{MS_{trt}}{MS_{E}} = 0.3545$}\newline
+\centerline{$F^{*} = \frac{MS_{row}}{MS_{E}} = 0.8423$}\newline
+\centerline{$F^{*} = \frac{MS_{col}}{MS_{E}} = 77.4979$}\newline
+\centerline{$F^{*} = \frac{MS_{rep}}{MS_{E}} = 0.8040$}\newline
+\centerline{$F_{0.05,4,36} = 2.634$}\\
+So by the lecture notes provided by the Stat 530 course instructor, we fail to reject $H_o$ and conclude that the mean treatment, row, and replication effects are not statistically significant, which is supported by the conclusions from the parameter estimates.
+However, we reject $H_{o}$ and conclude that the mean column effect is statistically significant since its F test ratio is significantly larger than the provided F critical value. This implies that the temperature-blocking factor may be the most significant in providing information about the average hiker's physical performance. To further support this result, we proceed by constructing $95\%$ confidence intervals for the pairwise difference of means for the temperature and humidity level blocking factors.
+
+\section{Post-ANOVA Analysis using the Method of Confidence Intervals}
+After conducting the main analysis of the hiking data, it is also a wise decision to conduct some additional analysis in the form of confidence intervals for the difference in factor means. We define this contrast as:\\
+\centerline{$|\mu_{i}... - \mu_{i...'}|$}\\
+where we take the difference of means from two different factor levels. The intention behind this section of this experiment is to further investigate if there is a difference in mean effects to support the statistical conclusion reached in the previous section. The respective confidence intervals for both the temperature and humidity levels are provided below:\\
+\centerline{$-0.1497 \leq (\mu_{1...} - \mu_{2...}) \leq 1.3297$}\newline
+\centerline{$-0.5497 \leq (\mu_{1...} - \mu_{3...}) \leq 0.9297$}\newline
+\centerline{$2.2403 \leq (\mu_{1...} - \mu_{4...}) \leq 3.7197$}\newline
+\centerline{$-0.3397 \leq (\mu_{2...} - \mu_{3...}) \leq 1.1397$}\newline
+\centerline{$2.8303 \leq (\mu_{2...} - \mu_{4...}) \leq 4.3097$}\newline
+\centerline{$2.4303 \leq (\mu_{3...} - \mu_{4...}) \leq 3.9097$}\\\\
+\centerline{$9.8503 \leq (\mu_{.1..} - \mu_{.2..}) \leq 11.3297$}\newline
+\centerline{$24.1103 \leq (\mu_{.1..} - \mu_{.3..}) \leq 25.5897$}\newline
+\centerline{$35.0203 \leq (\mu_{.1..} - \mu_{.4..}) \leq 36.4997$}\newline
+\centerline{$13.5203 \leq (\mu_{.2..} - \mu_{.3..}) \leq 14.9997$}\newline
+\centerline{$24.4303 \leq (\mu_{.2..} - \mu_{.4..}) \leq 25.9097$}\newline
+\centerline{$10.1703 \leq (\mu_{.3..} - \mu_{.4..}) \leq 11.6497$}\\
+
+The first six confidence intervals are for the humidity levels factor while the six other confidence intervals describe the temperature level factors. From these intervals, we are $95\%$ confident that the temperatures 70 degrees Fahrenheit and 75 degrees Fahrenheit are statistically significant. For humidity levels in percentages, humidity levels $5\%$, $10\%$, $15\%$ are statistically significant. These conclusions are supported by the presence of $0$ being within the appropriate confidence intervals. 
